@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GestForm
 {
@@ -18,6 +19,6 @@ namespace GestForm
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
-        Dictionary<int, string> Sort(List<int> list);
+        Tuple<Dictionary<int, string>, TimeSpan> Sort(List<int> list);
     }
 }
