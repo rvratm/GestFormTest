@@ -19,8 +19,13 @@ namespace GestForm
             // A list of 2 sort classes in order to compare computation time
             var gestformSortList = new List<IGestFormSort> { new DigitGestFormSort(), new ModuloGestFormSort() };
 
+            Console.Write("Choose random integer list size: ");
+            int size = 50;
+            int.TryParse(Console.ReadLine(), out size);
+                      
+
             // Get a random integer list
-            var values = GenRandomIntList(10, -999, 999);
+            var values = GenRandomIntList(size, -999, 999);
             try
             {
                 // Sort and display the result on the console
@@ -35,6 +40,9 @@ namespace GestForm
             {
                 Console.WriteLine(e.Message);
             }
+
+            Console.Write("Press [enter] to continue...");
+            Console.ReadLine();
         }
 
         /// <summary>
