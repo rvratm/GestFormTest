@@ -6,7 +6,7 @@ namespace GestForm
 {
     public abstract class GestFormSortBase : IGestFormSort
     {
-        const string _Name = "Modulo sorting";
+        protected string _Name = "Undefined";
 
         public string GetName()
         {
